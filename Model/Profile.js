@@ -114,5 +114,10 @@ const ProfileSchema = new Schema({
     }
 })
 
+//need to createConnection to use model multiple times
 
-module.exports = Profile = mongoose.model('profile', ProfileSchema);
+const db = require('../config/keys');
+const databaseConnection = database => mongoose.createConnection(db.mongoURI, {useNewUrlParser: true});
+const db1 = databaseConnection('profiles');
+
+module.exports = Profile = db1.model('profile', ProfileSchema);
