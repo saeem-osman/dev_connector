@@ -93,7 +93,7 @@ router.post('/login', (req,res)=>{
                     }
                     //
                     else {
-                        errors.password = 'Password is not correct';
+                        errors.password = 'Password is not correct na bhai';
                         return res.status(404).json(errors)
                     };
                 })
