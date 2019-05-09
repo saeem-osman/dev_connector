@@ -13,6 +13,12 @@ class Register extends Component {
         password2: '',
         errors: {}
     }
+    //life cycle method to redirect to dashboard if user is already logged in
+    componentDidMount(){
+        if(this.props.auth.isAuthenticated){
+            this.props.history.push('/dashboard');
+        }
+    }
 
     //life cycle method to recieve props
     componentWillReceiveProps(nextProps){

@@ -22,7 +22,7 @@ if(localStorage.jwtToken){
   store.dispatch(setCurrentUser(decoded));
   //check login expiration
   const currentTime = Date.now() /1000;
-  if(currentTime < decoded.exp){
+  if(decoded.exp < currentTime){
     //logout user
     store.dispatch(logoutUser());
     //clear current profile
