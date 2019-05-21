@@ -3,6 +3,9 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers'
 const middleware = [thunk];
 const initialState = {}
+
+//after using the chrome extensin, redux devtools should be commented out
+
 const store = createStore(
     rootReducer, 
     initialState, 
