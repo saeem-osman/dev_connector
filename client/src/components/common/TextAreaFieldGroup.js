@@ -27,7 +27,7 @@ TextAreaFieldGroup.propTypes = ({
     name: PropTypes.string.isRequired,
     placeholder: PropTypes.string,
     value: PropTypes.string.isRequired,
-    info: PropTypes,
+    info: PropTypes.string,
     error: PropTypes.string,
     onChange: PropTypes.func.isRequired,
 
