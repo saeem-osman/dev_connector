@@ -16,6 +16,9 @@ class Navbar extends React.Component {
     const { isAuthenticated, user } = this.props.auth;
     const loggedUser = (
       <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+              <Link className="nav-link" to="/dashboard">Dashboard</Link>
+            </li>
             <li className="nav-item">
               <a
                 href="/"
