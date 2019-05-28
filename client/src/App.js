@@ -19,6 +19,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/create-profile/CreateProfile';
 import EditProfile from './components/edit-profile/EditProfile';
 import AddExperience from './components/credentials/AddExperience';
+import AddEducation from './components/credentials/AddEducation'
 
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
@@ -62,8 +63,12 @@ class App extends React.Component{
             <PrivateRoute exact  path="/dashboard" component={ Dashboard } />
             <PrivateRoute exact path="/create-profile" component={ CreateProfile } />
             <PrivateRoute exact path="/edit-profile" component={ EditProfile } />
-            <PrivateRoute exact path="/add-experience" component={ AddExperience } />
-
+          </Switch>
+          <Switch>
+          <PrivateRoute exact path="/add-experience" component={ AddExperience } />
+          </Switch>
+          <Switch>
+          <PrivateRoute exact path="/add-education" component={ AddEducation } />
           </Switch>
         </div>
         <Footer />

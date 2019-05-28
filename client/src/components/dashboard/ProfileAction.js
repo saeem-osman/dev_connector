@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 const ProfileAction = () => {
@@ -13,7 +13,7 @@ const ProfileAction = () => {
               <i className="fas fa-graduation-cap text-info mr-1"></i>
               Add Education</Link>
         </div>
-    )
+    ) 
 }
 
 export default ProfileAction
