@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { getCurrentProfile, deleteAccount } from '../../actions/profileActions';
 import ProfileAction from './ProfileAction';
+import Experience from './Experience';
+import Education from './Education'
 // import Spinner from '../common/spinner'
 
 class Dashboard extends Component {
@@ -30,7 +32,9 @@ class Dashboard extends Component {
                         </p>
                         <ProfileAction />
 
-                {/*  task to be complete*/}
+                        <Experience experience={profile.experience} />
+
+                        <Education education={profile.education} />
 
                     <div style={{marginBottom: '60px'}}>
                         <button className="btn btn-danger" onClick={this.onDeleteButton}>Delete Account</button>
