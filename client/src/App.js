@@ -22,6 +22,7 @@ import AddExperience from './components/credentials/AddExperience';
 import AddEducation from './components/credentials/AddEducation'
 import Profiles from './components/profiles/Profiles'
 import Profile from './components/Profile/Profile';
+import NotFound from './components/NotFound/NotFound';
 
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import { Provider } from 'react-redux'
@@ -63,6 +64,7 @@ class App extends React.Component{
           <Route path="/login" component={ Login } />
           <Route path="/profiles" component={ Profiles } />
           <Route path="/profile/:handle" component={ Profile } />
+          <Route exact path="/not-found" component={ NotFound } />
 
           <Switch>
             <PrivateRoute exact  path="/dashboard" component={ Dashboard } />
